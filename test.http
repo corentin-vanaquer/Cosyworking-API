@@ -1,0 +1,146 @@
+@hostname = http://localhost:3000/api
+
+### séparateur entre deux requêtes
+
+POST {{hostname}}/auth/signup
+content-type: application/json
+
+{
+   "first_name": "patt",
+	"last_name": "bobaa",
+   "password": "Password123$",
+   "email": "bob@doeuf.com",
+   "gender": "male",
+   "role_id": "coworker"
+}
+
+### séparateur entre deux requêtes
+
+POST {{hostname}}/auth/login
+content-type: application/json
+
+{
+
+   "email": "vanaquer@cosyworking.fr",
+   "password": "Password123$"
+}
+
+### séparateur entre deux requêtes
+
+GET {{hostname}}/coworker
+content-type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjUxLCJ1c2VyUm9sZURlc2NyaXB0aW9uIjoiY293b3JrZXIiLCJpYXQiOjE2NjQ1NDU2NjksImV4cCI6MTY2NDYzMjA2OX0.w3umxgfTITzFvWGxa-55gb3WIY4rv0jmn5m5jXvG3Rw
+
+{
+   "email": "rouge@doeuf.com",
+   "password": "Password123$"
+}
+
+### séparateur entre deux requêtes
+
+GET {{hostname}}/personalspace/:id/coworkerbooking
+content-type: application/json
+
+### séparateur entre deux requêtes
+
+POST {{hostname}}/booking/request
+content-type: application/json
+
+{
+   "start_date": "05.01.01",
+   "end_date" : "06.02.02",
+   "user_id" : 1,
+   "workspace_id" : 3
+}
+
+### séparateur entre deux requêtes
+
+GET {{hostname}}/personalspace/6/coworkerbooking
+content-type: application/json
+
+### séparateur entre deux requêtes
+
+PATCH {{hostname}}/booking/2/state
+content-type: application/json
+
+{
+   "stateDescription": 
+}
+
+### séparateur entre deux requêtes
+
+GET {{hostname}}/workspace/1/bookeddate
+content-type: application/json
+
+
+### séparateur entre deux requêtes
+
+GET {{hostname}}/personalspace/1/booking
+content-type: application/json
+
+### séparateur entre deux requêtes
+
+GET {{hostname}}/user/2
+content-type: application/json
+
+### séparateur entre deux requêtes
+
+GET {{hostname}}/personalspace/1/profil
+content-type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJSb2xlRGVzY3JpcHRpb24iOiJob3N0IiwiaWF0IjoxNjY1NDExOTYzLCJleHAiOjE2NjU0MTIwMjN9.R1ODcjdYi9eGz3LVkd7kPi6JvQ2SQDLh5H_fqSzq0Yg
+
+
+### séparateur entre deux requêtes
+
+PATCH {{hostname}}/personalspace/1/profil
+content-type: application/json
+
+{
+   "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/875.jpg",
+   "first_name": "parfaiteee",
+   "about": "Je suis très grandesss"
+}
+
+### séparateur entre deux requêtes
+
+POST {{hostname}}/workspace/create
+content-type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJSb2xlRGVzY3JpcHRpb24iOiJob3N0IiwiaWF0IjoxNjY1MTQyMTQ1LCJleHAiOjE2NjUxNDU3NDV9.-dBPJNHDv0HkN8_Yv8WBCLlMOdFve1eADu6xnjGiC-k
+
+{
+	"title": "desktop",
+	"description": "primé meilleur bureau", 
+	"address": "10 rue champion", 
+	"zip_code": "35000",
+	"city": "Rennes",
+	"day_price": 10,
+	"half_day_price": 7,
+	"user_id": 2,
+	"equipment_list": 
+	[
+		{
+			"description": "Piscine"
+		},
+		{
+			"description": "Enceinte"
+		}
+	]
+}
+
+### séparateur entre deux requêtes
+
+
+GET {{hostname}}/equipments
+content-type: application/json
+
+DELETE {{hostname}}/workspace/1
+content-type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJSb2xlRGVzY3JpcHRpb24iOiJob3N0IiwiaWF0IjoxNjY1NDAzMTczLCJleHAiOjE2NjU0MDMyMzN9.Cm-T-l_M7gJ7fSUCvnJL85oi_9XMUff3kJMFc6Zh6fk
+
+{
+	"id" : 60,
+	"link" : "public/images/workspace/01.png",
+	"main_image" : false,
+	"workspace_id" : 1
+}
+

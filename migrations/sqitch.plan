@@ -1,0 +1,5 @@
+%syntax-version=1.0.0
+%project=cosyworking
+
+1.initDb 2022-09-22T10:26:49Z Vanaquer,,, <corentin@corentin-Inspiron-3505> # initialization db
+2.plpgsql_function 2022-10-04T08:55:49Z System Administrator <root@MacBook-Air-de-Quentin.local> # Creation of a plpgsql function for userDatamapper
